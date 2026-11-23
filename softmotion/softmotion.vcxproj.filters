@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\comm">
+      <UniqueIdentifier>{36147b71-2965-4503-b379-660df118f16a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\motion">
+      <UniqueIdentifier>{bef97993-b47a-48e1-a03c-3889086418b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\motion">
+      <UniqueIdentifier>{2c926427-b321-47a7-b484-6757c2d435c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\comm">
+      <UniqueIdentifier>{5057914d-b4b2-435d-8c9f-9cf3fe775929}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\comm\acp_access.h">
+      <Filter>头文件\comm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\motion\struct_axis.h">
+      <Filter>头文件\motion</Filter>
+    </ClInclude>
+    <ClInclude Include="include\motion\struct_robot.h">
+      <Filter>头文件\motion</Filter>
+    </ClInclude>
+    <ClInclude Include="include\motion\struct_io.h">
+      <Filter>头文件\motion</Filter>
+    </ClInclude>
+    <ClInclude Include="include\softmotion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\comm\acp_result.h">
+      <Filter>头文件\comm</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\motion\struct_intp.h">
+      <Filter>头文件\motion</Filter>
+    </ClInclude>
+    <ClInclude Include="include\comm\tcp_client.h">
+      <Filter>头文件\comm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\comm\crc.h">
+      <Filter>头文件\comm</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\motion\smc_axis.cpp">
+      <Filter>源文件\motion</Filter>
+    </ClCompile>
+    <ClCompile Include="src\motion\smc_io.cpp">
+      <Filter>源文件\motion</Filter>
+    </ClCompile>
+    <ClCompile Include="src\motion\smc_robot.cpp">
+      <Filter>源文件\motion</Filter>
+    </ClCompile>
+    <ClCompile Include="src\motion\smc_conn.cpp">
+      <Filter>源文件\motion</Filter>
+    </ClCompile>
+    <ClCompile Include="src\comm\acp_access.cpp">
+      <Filter>源文件\comm</Filter>
+    </ClCompile>
+    <ClCompile Include="src\motion\smc_intp.cpp">
+      <Filter>源文件\motion</Filter>
+    </ClCompile>
+    <ClCompile Include="src\comm\ring_queue.cpp">
+      <Filter>源文件\comm</Filter>
+    </ClCompile>
+    <ClCompile Include="src\comm\tcp_client.cpp">
+      <Filter>源文件\comm</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="softmotion.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

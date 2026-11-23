@@ -1,0 +1,867 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.14.0</Version>
+    <SymbolConfigObject version="4.2.0.0" runtimeid="3.5.18.40" libversion="4.2.0.0" compiler="3.5.18.40" lmm="3.5.18.40" profile="MetaFacture V1.0.4.4+" settings="SupportOPCUA, LayoutCalculator=OptimizedClientSideLayoutCalculator" />
+    <ProjectInfo name="AppTemplate" devicename="Device" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_DWORD" size="4" swapsize="4" typeclass="DWord" iecname="DWORD" />
+    <TypeSimple name="T_INT" size="2" swapsize="2" typeclass="Int" iecname="INT" />
+    <TypeSimple name="T_LREAL" size="8" swapsize="8" typeclass="LReal" iecname="LREAL" />
+    <TypeSimple name="T_REAL" size="4" swapsize="4" typeclass="Real" iecname="REAL" />
+    <TypeSimple name="T_STRING" size="81" swapsize="0" typeclass="String" iecname="STRING" />
+    <TypeSimple name="T_WORD" size="2" swapsize="2" typeclass="Word" iecname="WORD" />
+    <TypeArray name="T_ARRAY__0__1__OF_LREAL" size="16" nativesize="16" typeclass="Array" iecname="ARRAY [0..1] OF LREAL" basetype="T_LREAL">
+      <ArrayDim minrange="0" maxrange="1" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__5__0__5__OF_LREAL" size="288" nativesize="288" typeclass="Array" iecname="ARRAY [0..5, 0..5] OF LREAL" basetype="T_LREAL">
+      <ArrayDim minrange="0" maxrange="5" />
+      <ArrayDim minrange="0" maxrange="5" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__5__OF_LREAL" size="48" nativesize="48" typeclass="Array" iecname="ARRAY [0..5] OF LREAL" basetype="T_LREAL">
+      <ArrayDim minrange="0" maxrange="5" />
+    </TypeArray>
+    <TypeUserDef name="T_AXISPOS_REF" size="48" nativesize="48" typeclass="Userdef" pouclass="STRUCTURE" iecname="AXISPOS_REF">
+      <UserDefElement iecname="a0" type="T_LREAL" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="a1" type="T_LREAL" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="a2" type="T_LREAL" byteoffset="16" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="a3" type="T_LREAL" byteoffset="24" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="a4" type="T_LREAL" byteoffset="32" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="a5" type="T_LREAL" byteoffset="40" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_CoordSysType" size="2" nativesize="2" swapsize="2" typeclass="Enum" iecname="CoordSysType" basetype="T_INT">
+      <UserDefElement type="T_CoordSysType" iecname="ACS" enumvalue="0" />
+      <UserDefElement type="T_CoordSysType" iecname="MCS" enumvalue="1" />
+      <UserDefElement type="T_CoordSysType" iecname="WCS" enumvalue="2" />
+      <UserDefElement type="T_CoordSysType" iecname="PCS_1" enumvalue="3" />
+      <UserDefElement type="T_CoordSysType" iecname="PCS_2" enumvalue="4" />
+      <UserDefElement type="T_CoordSysType" iecname="TCS" enumvalue="5" />
+      <UserDefElement type="T_CoordSysType" iecname="ICS" enumvalue="6" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ET_AxisInGroup" size="2" nativesize="2" swapsize="2" typeclass="Enum" iecname="ET_AxisInGroup" basetype="T_INT">
+      <UserDefElement type="T_ET_AxisInGroup" iecname="ACS_A1" enumvalue="0" />
+      <UserDefElement type="T_ET_AxisInGroup" iecname="ACS_A2" enumvalue="1" />
+      <UserDefElement type="T_ET_AxisInGroup" iecname="ACS_A3" enumvalue="2" />
+      <UserDefElement type="T_ET_AxisInGroup" iecname="ACS_A4" enumvalue="3" />
+      <UserDefElement type="T_ET_AxisInGroup" iecname="ACS_A5" enumvalue="4" />
+      <UserDefElement type="T_ET_AxisInGroup" iecname="ACS_A6" enumvalue="5" />
+      <UserDefElement type="T_ET_AxisInGroup" iecname="MCS_X" enumvalue="6" />
+      <UserDefElement type="T_ET_AxisInGroup" iecname="MCS_Y" enumvalue="7" />
+      <UserDefElement type="T_ET_AxisInGroup" iecname="MCS_Z" enumvalue="8" />
+      <UserDefElement type="T_ET_AxisInGroup" iecname="MCS_A" enumvalue="9" />
+      <UserDefElement type="T_ET_AxisInGroup" iecname="MCS_B" enumvalue="10" />
+      <UserDefElement type="T_ET_AxisInGroup" iecname="MCS_C" enumvalue="11" />
+      <UserDefElement type="T_ET_AxisInGroup" iecname="ACS_OFFSET" enumvalue="0" />
+      <UserDefElement type="T_ET_AxisInGroup" iecname="MCS_OFFSET" enumvalue="6" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ET_ControlMode" size="2" nativesize="2" swapsize="2" typeclass="Enum" iecname="ET_ControlMode" basetype="T_INT">
+      <UserDefElement type="T_ET_ControlMode" iecname="EM_INVALID" enumvalue="0" />
+      <UserDefElement type="T_ET_ControlMode" iecname="EM_MOVEABS" enumvalue="1" />
+      <UserDefElement type="T_ET_ControlMode" iecname="EM_MOVEREL" enumvalue="2" />
+      <UserDefElement type="T_ET_ControlMode" iecname="EM_MOVEVEL" enumvalue="3" />
+      <UserDefElement type="T_ET_ControlMode" iecname="EM_SETPOS" enumvalue="4" />
+      <UserDefElement type="T_ET_ControlMode" iecname="EM_DRV_HOME" enumvalue="5" />
+      <UserDefElement type="T_ET_ControlMode" iecname="EM_SMC_HOME" enumvalue="6" />
+      <UserDefElement type="T_ET_ControlMode" iecname="EM_JOG" enumvalue="7" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ET_GroupRunMode" size="2" nativesize="2" swapsize="2" typeclass="Enum" iecname="ET_GroupRunMode" basetype="T_INT">
+      <UserDefElement type="T_ET_GroupRunMode" iecname="EM_MoveAbs" enumvalue="0" />
+      <UserDefElement type="T_ET_GroupRunMode" iecname="EM_MoveRel" enumvalue="1" />
+      <UserDefElement type="T_ET_GroupRunMode" iecname="EM_MoveLine_Abs" enumvalue="2" />
+      <UserDefElement type="T_ET_GroupRunMode" iecname="EM_MoveLine_Rel" enumvalue="3" />
+      <UserDefElement type="T_ET_GroupRunMode" iecname="EM_MoveCirc_Abs" enumvalue="4" />
+      <UserDefElement type="T_ET_GroupRunMode" iecname="EM_MoveCirc_Rel" enumvalue="5" />
+      <UserDefElement type="T_ET_GroupRunMode" iecname="EM_Jog" enumvalue="6" />
+      <UserDefElement type="T_ET_GroupRunMode" iecname="EM_SetPos" enumvalue="7" />
+      <UserDefElement type="T_ET_GroupRunMode" iecname="EM_Homing" enumvalue="8" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_BUFFER_MODE" size="2" nativesize="2" swapsize="2" typeclass="Enum" iecname="MC_BUFFER_MODE" basetype="T_INT">
+      <UserDefElement type="T_MC_BUFFER_MODE" iecname="Aborting" enumvalue="0" />
+      <UserDefElement type="T_MC_BUFFER_MODE" iecname="Buffered" enumvalue="1" />
+      <UserDefElement type="T_MC_BUFFER_MODE" iecname="BlendingLow" enumvalue="2" />
+      <UserDefElement type="T_MC_BUFFER_MODE" iecname="BlendingPrevious" enumvalue="3" />
+      <UserDefElement type="T_MC_BUFFER_MODE" iecname="BlendingNext" enumvalue="4" />
+      <UserDefElement type="T_MC_BUFFER_MODE" iecname="BlendingHigh" enumvalue="5" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_CIRC_PATHCHOICE" size="2" nativesize="2" swapsize="2" typeclass="Enum" iecname="MC_CIRC_PATHCHOICE" basetype="T_INT">
+      <UserDefElement type="T_MC_CIRC_PATHCHOICE" iecname="CLOCKWISE" enumvalue="0" />
+      <UserDefElement type="T_MC_CIRC_PATHCHOICE" iecname="COUNTER_CLOCKWISE" enumvalue="1" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_COORD_REF" size="48" nativesize="48" typeclass="Userdef" pouclass="STRUCTURE" iecname="MC_COORD_REF">
+      <UserDefElement iecname="X" type="T_LREAL" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Y" type="T_LREAL" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Z" type="T_LREAL" byteoffset="16" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="A" type="T_LREAL" byteoffset="24" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="B" type="T_LREAL" byteoffset="32" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="C" type="T_LREAL" byteoffset="40" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_DIRECTION" size="2" nativesize="2" swapsize="2" typeclass="Enum" iecname="MC_DIRECTION" basetype="T_INT">
+      <UserDefElement type="T_MC_DIRECTION" iecname="fastest" enumvalue="3" />
+      <UserDefElement type="T_MC_DIRECTION" iecname="current" enumvalue="2" />
+      <UserDefElement type="T_MC_DIRECTION" iecname="positive" enumvalue="1" />
+      <UserDefElement type="T_MC_DIRECTION" iecname="shortest" enumvalue="0" />
+      <UserDefElement type="T_MC_DIRECTION" iecname="negative" enumvalue="-1" />
+    </TypeUserDef>
+    <TypeUserDef name="T_MC_TRANSITION_MODE" size="2" nativesize="2" swapsize="2" typeclass="Enum" iecname="MC_TRANSITION_MODE" basetype="T_INT">
+      <UserDefElement type="T_MC_TRANSITION_MODE" iecname="TMNone" enumvalue="0" />
+      <UserDefElement type="T_MC_TRANSITION_MODE" iecname="TMStartVelocity" enumvalue="1" />
+      <UserDefElement type="T_MC_TRANSITION_MODE" iecname="TMCornerDistance" enumvalue="2" />
+    </TypeUserDef>
+    <TypeUserDef name="T_SMC_AXIS_GROUP_STATE" size="2" nativesize="2" swapsize="2" typeclass="Enum" iecname="SMC_AXIS_GROUP_STATE" basetype="T_INT">
+      <UserDefElement type="T_SMC_AXIS_GROUP_STATE" iecname="Disabled" enumvalue="0" />
+      <UserDefElement type="T_SMC_AXIS_GROUP_STATE" iecname="Standby" enumvalue="1" />
+      <UserDefElement type="T_SMC_AXIS_GROUP_STATE" iecname="Moving" enumvalue="2" />
+      <UserDefElement type="T_SMC_AXIS_GROUP_STATE" iecname="Homing" enumvalue="3" />
+      <UserDefElement type="T_SMC_AXIS_GROUP_STATE" iecname="Stopping" enumvalue="4" />
+      <UserDefElement type="T_SMC_AXIS_GROUP_STATE" iecname="ErrorStop" enumvalue="5" />
+    </TypeUserDef>
+    <TypeUserDef name="T_SMC_AXIS_STATE" size="2" nativesize="2" swapsize="2" typeclass="Enum" iecname="SMC_AXIS_STATE" basetype="T_INT">
+      <UserDefElement type="T_SMC_AXIS_STATE" iecname="power_off" enumvalue="0" />
+      <UserDefElement type="T_SMC_AXIS_STATE" iecname="errorstop" enumvalue="1" />
+      <UserDefElement type="T_SMC_AXIS_STATE" iecname="stopping" enumvalue="2" />
+      <UserDefElement type="T_SMC_AXIS_STATE" iecname="standstill" enumvalue="3" />
+      <UserDefElement type="T_SMC_AXIS_STATE" iecname="discrete_motion" enumvalue="4" />
+      <UserDefElement type="T_SMC_AXIS_STATE" iecname="continuous_motion" enumvalue="5" />
+      <UserDefElement type="T_SMC_AXIS_STATE" iecname="synchronized_motion" enumvalue="6" />
+      <UserDefElement type="T_SMC_AXIS_STATE" iecname="homing" enumvalue="7" />
+    </TypeUserDef>
+    <TypeUserDef name="T_SMC_CIRC_MODE" size="2" nativesize="2" swapsize="2" typeclass="Enum" iecname="SMC_CIRC_MODE" basetype="T_INT">
+      <UserDefElement type="T_SMC_CIRC_MODE" iecname="BORDER" enumvalue="0" />
+      <UserDefElement type="T_SMC_CIRC_MODE" iecname="CENTER" enumvalue="1" />
+      <UserDefElement type="T_SMC_CIRC_MODE" iecname="RADIUS" enumvalue="2" />
+    </TypeUserDef>
+    <TypeUserDef name="T_SMC_ERROR" size="2" nativesize="2" swapsize="2" typeclass="Enum" iecname="SMC_ERROR" basetype="T_WORD">
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_NO_ERROR" enumvalue="0" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DI_GENERAL_COMMUNICATION_ERROR" enumvalue="1" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DI_AXIS_ERROR" enumvalue="2" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DI_FIELDBUS_LOST_SYNCRONICITY" enumvalue="3" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DI_SWLIMITS_EXCEEDED" enumvalue="10" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DI_HWLIMITS_EXCEEDED" enumvalue="11" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DI_LINEAR_AXIS_OUTOFRANGE" enumvalue="12" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DI_HALT_OR_QUICKSTOP_NOT_SUPPORTED" enumvalue="13" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DI_VOLTAGE_DISABLED" enumvalue="14" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DI_IRREGULAR_ACTPOSITION" enumvalue="15" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DI_POSITIONLAGERROR" enumvalue="16" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DI_HOMING_ERROR" enumvalue="17" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DI_LICENSING_ERROR" enumvalue="18" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DI_DRIVE_LIMIT_ACTIVE" enumvalue="19" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_REGULATOR_OR_START_NOT_SET" enumvalue="20" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_WRONG_CONTROLLER_MODE" enumvalue="21" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INVALID_ACTION_FOR_LOGICAL" enumvalue="25" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_IS_NOT_OPERATIONAL" enumvalue="27" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_NOT_FOLLOWING_SETVALUES" enumvalue="28" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_FB_WASNT_CALLED_DURING_MOTION" enumvalue="30" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_IS_NO_AXIS_REF" enumvalue="31" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_REF_CHANGED_DURING_OPERATION" enumvalue="32" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_FB_ACTIVE_AXIS_DISABLED" enumvalue="33" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_NOT_READY_FOR_MOTION" enumvalue="34" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_ERROR_DURING_MOTION" enumvalue="35" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_FB_CALLED_FROM_WRONG_TASK" enumvalue="36" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_VD_MAX_VELOCITY_EXCEEDED" enumvalue="40" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_VD_MAX_ACCELERATION_EXCEEDED" enumvalue="41" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_VD_MAX_DECELERATION_EXCEEDED" enumvalue="42" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_3SH_INVALID_VELACC_VALUES" enumvalue="50" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_3SH_MODE_NEEDS_HWLIMIT" enumvalue="51" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_FRC_NO_FREE_HANDLE" enumvalue="60" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MAC_INITIALIZATION_FAILED" enumvalue="65" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MAC_INVALID_TASK_HANDLE" enumvalue="66" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MAC_TOO_MANY_TASKS" enumvalue="67" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MAC_ATOMIC_ADD_FAILED" enumvalue="68" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SDO_INVALID_DATALENGTH" enumvalue="69" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SCM_NOT_SUPPORTED" enumvalue="70" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SCM_AXIS_IN_WRONG_STATE" enumvalue="71" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SCM_INTERRUPTED" enumvalue="72" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_ST_WRONG_CONTROLLER_MODE" enumvalue="75" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RAG_ERROR_DURING_STARTUP" enumvalue="80" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RAG_ERROR_AXIS_NOT_INITIALIZED" enumvalue="81" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PP_WRONG_AXIS_TYPE" enumvalue="85" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PP_NUMBER_OF_ABSOLUTE_BITS_INVALID" enumvalue="86" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_NEGATIVE_MODULO_PERIOD" enumvalue="87" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CGR_ZERO_VALUES" enumvalue="90" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CGR_DRIVE_POWERED" enumvalue="91" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CGR_INVALID_POSPERIOD" enumvalue="92" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CGR_POSPERIOD_NOT_INTEGRAL" enumvalue="93" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_FRACTION_TECH_UNITS_INVALID" enumvalue="94" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_P_FTASKCYCLE_EMPTY" enumvalue="110" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_R_NO_ERROR_TO_RESET" enumvalue="120" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_R_DRIVE_DOESNT_ANSWER" enumvalue="121" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_R_ERROR_NOT_RESETTABLE" enumvalue="122" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_R_DRIVE_DOESNT_ANSWER_IN_TIME" enumvalue="123" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_R_CANNOT_RESET_COMMUNICATION_ERROR" enumvalue="124" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RP_PARAM_UNKNOWN" enumvalue="130" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RP_REQUESTING_ERROR" enumvalue="131" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RP_DRIVE_PARAMETER_NOT_MAPPED" enumvalue="132" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RP_PARAM_CONVERSION_ERROR" enumvalue="133" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_WP_PARAM_INVALID" enumvalue="140" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_WP_SENDING_ERROR" enumvalue="141" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_WP_DRIVE_PARAMETER_NOT_MAPPED" enumvalue="142" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_WP_PARAM_CONVERSION_ERROR" enumvalue="143" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_H_AXIS_WASNT_STANDSTILL" enumvalue="170" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_H_AXIS_DIDNT_START_HOMING" enumvalue="171" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_H_AXIS_DIDNT_ANSWER" enumvalue="172" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_H_ERROR_WHEN_STOPPING" enumvalue="173" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_H_AXIS_IN_ERRORSTOP" enumvalue="174" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MS_UNKNOWN_STOPPING_ERROR" enumvalue="180" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MS_INVALID_ACCDEC_VALUES" enumvalue="181" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MS_DIRECTION_NOT_APPLICABLE" enumvalue="182" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MS_AXIS_IN_ERRORSTOP" enumvalue="183" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_BLOCKING_MC_STOP_WASNT_CALLED" enumvalue="184" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MS_AXIS_ALREADY_STOPPING" enumvalue="185" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_UNKNOWN_TASK_INTERVAL" enumvalue="200" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MA_INVALID_VELACC_VALUES" enumvalue="201" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MA_INVALID_DIRECTION" enumvalue="202" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MR_INVALID_VELACC_VALUES" enumvalue="226" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MR_INVALID_DIRECTION" enumvalue="227" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_OVR_INVALID_OVERRIDE_FACTORS" enumvalue="231" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INVALID_AXIS_FORECAST" enumvalue="235" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_FORECAST_NOT_SUPPORTED" enumvalue="236" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MAD_INVALID_VELACC_VALUES" enumvalue="251" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MAD_INVALID_DIRECTION" enumvalue="252" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MSI_INVALID_VELACC_VALUES" enumvalue="276" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MSI_INVALID_DIRECTION" enumvalue="277" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MSI_INVALID_EXECUTION_ORDER" enumvalue="278" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_LOGICAL_NO_REAL_AXIS" enumvalue="300" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MV_INVALID_ACCDEC_VALUES" enumvalue="301" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MV_DIRECTION_NOT_APPLICABLE" enumvalue="302" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PP_ARRAYSIZE" enumvalue="325" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PP_STEP0MS" enumvalue="326" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_VP_ARRAYSIZE" enumvalue="350" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_VP_STEP0MS" enumvalue="351" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AP_ARRAYSIZE" enumvalue="375" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AP_STEP0MS" enumvalue="376" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TP_TRIGGEROCCUPIED" enumvalue="400" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TP_COULDNT_SET_WINDOW" enumvalue="401" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TP_COMM_ERROR" enumvalue="402" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRIGGER_OUT_OF_RANGE" enumvalue="403" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_LATCH_IN_CONTROLLER_NOT_SUPPORTED" enumvalue="404" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AT_TRIGGERNOTOCCUPIED" enumvalue="410" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MCR_INVALID_VELACC_VALUES" enumvalue="426" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MCR_INVALID_DIRECTION" enumvalue="427" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MCA_INVALID_VELACC_VALUES" enumvalue="451" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MCA_INVALID_DIRECTION" enumvalue="452" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MCA_DIRECTION_NOT_APPLICABLE" enumvalue="453" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SDL_INVALID_AXIS_STATE" enumvalue="475" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SDL_INVALID_VELACC_VALUES" enumvalue="476" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SACF_INVALID_DYNAMIC_FACTOR" enumvalue="480" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INVALID_VELACCJERK_VALUES" enumvalue="501" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INVALID_DIRECTION" enumvalue="502" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CR_NO_TAPPETS_IN_CAM" enumvalue="600" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CR_TOO_MANY_TAPPETS" enumvalue="601" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CR_MORE_THAN_32_ACCESSES" enumvalue="602" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CI_NO_CAM_SELECTED" enumvalue="625" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CI_MASTER_OUT_OF_SCALE" enumvalue="626" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CI_RAMPIN_NEEDS_VELACC_VALUES" enumvalue="627" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CI_SCALING_INCORRECT" enumvalue="628" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CI_TOO_MANY_TAPPETS_PER_CYCLE" enumvalue="629" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CI_MORE_THAN_32_ACCESSES" enumvalue="630" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CI_MASTER_SYNC_POSITION_OUT_OF_SCALE" enumvalue="631" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CI_AVOID_REVERSAL_FOR_FINITE_AXIS" enumvalue="632" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CI_MASTERSTARTDISTANCE_MUST_BE_ZERO_BUFFERED" enumvalue="633" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CI_CAM_CHANGED_DURING_RAMP_IN_DIST" enumvalue="634" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CB_NOT_IMPLEMENTED" enumvalue="640" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_GI_RATIO_DENOM" enumvalue="675" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_GI_INVALID_ACC" enumvalue="676" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_GI_INVALID_DEC" enumvalue="677" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_GI_MASTER_REGULATOR_CHANGED" enumvalue="678" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_GI_INVALID_JERK" enumvalue="679" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PH_INVALID_VELACCDEC" enumvalue="725" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PH_ROTARYAXIS_PERIOD0" enumvalue="726" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MASTER_REGULATOR_CHANGED" enumvalue="727" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_NO_CAM_REF_TYPE" enumvalue="750" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_TABLE_DOES_NOT_COVER_MASTER_SCALE" enumvalue="751" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_TABLE_EMPTY_MASTER_RANGE" enumvalue="752" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_TABLE_INVALID_MASTER_MINMAX" enumvalue="753" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_TABLE_INVALID_SLAVE_MINMAX" enumvalue="754" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_INVALID_ELEMENT_COUNT" enumvalue="755" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_UNKNOWN_SEGMENT_TYPE" enumvalue="756" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_GIP_MASTER_DIRECTION_CHANGE" enumvalue="775" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_GIP_SLAVE_REVERSAL_CANNOT_BE_AVOIDED" enumvalue="776" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_GIP_AVOID_REVERSAL_FOR_FINITE_AXIS" enumvalue="777" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_GIP_MASTERSTARTDISTANCE_MUST_BE_ZERO_BUFFERED" enumvalue="778" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_GIP_CANNOT_START_SYNC" enumvalue="779" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RAMP_IN_MASTER_DIRECTION_CHANGED" enumvalue="780" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RAMP_IN_SLAVE_REVERSAL_CANNOT_BE_AVOIDED" enumvalue="781" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_BC_BL_TOO_BIG" enumvalue="800" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_QPROF_DIVERGES" enumvalue="825" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_QPROF_INVALID_PARAMETER" enumvalue="826" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_QPROF_NO_RESULT" enumvalue="827" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_QPROF_INVALID_NEW_LBD" enumvalue="828" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_QPROF_BAD_NEGOTIATION" enumvalue="829" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_QPROF_INVALID_INTERVAL" enumvalue="830" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_QPROF_NOT_ENOUGH_PHASES" enumvalue="831" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TG_INTERNAL_ERROR" enumvalue="832" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SRT_NOT_STANDSTILL_OR_POWEROFF" enumvalue="850" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SRT_INVALID_RAMPTYPE" enumvalue="851" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SMT_NOT_STANDSTILL_OR_POWEROFF" enumvalue="852" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SMT_INVALID_MOVEMENTTYPE_OR_POSITIONPERIOD" enumvalue="853" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SMT_AXIS_NOT_VIRTUAL" enumvalue="854" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_NO_LICENSE" enumvalue="1000" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INT_VEL_ZERO" enumvalue="1001" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INT_NO_STOP_AT_END" enumvalue="1002" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INT_DATA_UNDERRUN" enumvalue="1003" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INT_VEL_NONZERO_AT_STOP" enumvalue="1004" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INT_TOO_MANY_RECURSIONS" enumvalue="1005" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INT_NO_CHECKVELOCITIES" enumvalue="1006" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INT_PATH_EXCEEDED" enumvalue="1007" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INT_VEL_ACC_DEC_ZERO" enumvalue="1008" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INT_DWIPOTIME_ZERO" enumvalue="1009" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INT_JERK_NONPOSITIVE" enumvalue="1010" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INT_QPROF_DIVERGES" enumvalue="1011" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INT_INVLALID_VELOCITY_MODE" enumvalue="1012" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INT_TOO_MANY_AXES_INTERPOLATED" enumvalue="1013" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INT_DEGENERATE_SEGMENT" enumvalue="1014" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_HIGH_CURVATURE_SPLINE" enumvalue="1015" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INT2DIR_BUFFER_TOO_SMALL" enumvalue="1050" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INT2DIR_PATH_FITS_NOT_IN_QUEUE" enumvalue="1051" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_XINT_INVALID_DIRECTION" enumvalue="1070" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_XINT_NOINTERSECTION" enumvalue="1071" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_WAR_INT_OUTQUEUE_TOO_SMALL" enumvalue="1080" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_WAR_END_VELOCITIES_INCORRECT" enumvalue="1081" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CV_ACC_DEC_VEL_NONPOSITIVE" enumvalue="1100" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CA_INVALID_ACCDEC_VALUES" enumvalue="1120" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TOK_INCOMPLETE_TOKEN_AT_END_OF_INPUT" enumvalue="1130" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TOK_NOT_A_VALID_TOKEN" enumvalue="1131" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TOK_AMBIGUOUS_INPUT" enumvalue="1132" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TOK_STRING_TOO_LONG_FOR_TOKEN" enumvalue="1133" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TOK_INVALID_NUMLIT" enumvalue="1134" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_FUNC_DECL_TOO_FEW_ARGUMENTS" enumvalue="1150" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_FUNC_DECL_TOO_MANY_ARGUMENTS" enumvalue="1151" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_FUNC_DECL_WRONG_ARGUMENT_TYPE" enumvalue="1152" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_LOCAL_VAR_NOT_FOUND" enumvalue="1153" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_INVALID_STRING" enumvalue="1154" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_TOO_MANY_CLOSING_BRACKETS" enumvalue="1155" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_TOO_MANY_OPENING_BRACKETS" enumvalue="1156" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_NO_SUCH_INFIX_OPERATOR" enumvalue="1157" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_NO_SUCH_PREFIX_OPERATOR" enumvalue="1158" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_OPERATOR_INVALID_PRECEDENCE" enumvalue="1159" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_NOT_A_TERM" enumvalue="1160" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_EXPRESSION_INVALID_SEQUENCE" enumvalue="1161" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_TOO_MANY_TERMS" enumvalue="1162" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_STACK_OVERFLOW" enumvalue="1163" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_VAR_NAME_ALREADY_USED" enumvalue="1164" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_INCOMPLETE_SENTENCE_IN_TOKEN_QUEUE" enumvalue="1165" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_TOO_MANY_SUBPROGRAMS" enumvalue="1167" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_TOO_MANY_SUBPROGRAM_PARAMETERS" enumvalue="1168" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_SUBPROGRAM_LOOKUP_FAILED" enumvalue="1169" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_VAR_NOT_FOUND" enumvalue="1170" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_TOKEN_TYPE_UNKNOWN" enumvalue="1171" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_GOT_NO_TERM" enumvalue="1172" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_INVALID_VAR_TYPE" enumvalue="1173" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_UNEXPECTED_TOKEN" enumvalue="1174" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_ID3_EXPECTED" enumvalue="1175" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_ID_TOO_LONG" enumvalue="1176" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_GADDRESS_EXPECTED" enumvalue="1177" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_NWORD_EXPECTED" enumvalue="1178" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_NWORD_INVALID_SENTENCE_NUMBER" enumvalue="1179" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_NWORD_SENTENCE_NUMBER_NO_NUMBER_LITERAL" enumvalue="1180" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_USE_OF_RESERVED_KEYWORD" enumvalue="1181" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_SUBPROGRAMS_SIGNATURE_MISMATCH" enumvalue="1182" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_INITIAL_VALUE_HAS_WRONG_TYPE" enumvalue="1183" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_TOO_MANY_LOCAL_VARIABLES" enumvalue="1184" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_SUBPROG_MUST_BE_FIRST_SENTENCE" enumvalue="1185" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_ONLY_ONE_SUBPROGRAM_PER_FILE_ALLOWED" enumvalue="1186" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_LET_AFTER_REGULAR_SENTENCE" enumvalue="1187" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_UNMATCHED_END_SUBPROGRAM" enumvalue="1188" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_UNEXPECTED_TOKENS_AFTER_SUBPROGRAM" enumvalue="1189" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_MISSING_END_SUBPROGRAM" enumvalue="1190" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_USE_OF_KEYWORD" enumvalue="1191" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_DYNCALL_EXPECTED_SUBNAME_EXP" enumvalue="1192" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PRS_DYNCALL_EXPECTED_SUBNAME_TYPE_STRING" enumvalue="1193" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DEC_ACC_TOO_LITTLE" enumvalue="1200" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DEC_RET_TOO_LITTLE" enumvalue="1201" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DEC_OUTQUEUE_RAN_EMPTY" enumvalue="1202" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DEC_JUMP_TO_UNKNOWN_LINE" enumvalue="1203" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DEC_INVALID_SYNTAX" enumvalue="1204" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DEC_3DMODE_OBJECT_NOT_SUPPORTED" enumvalue="1205" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DEC_NEGATIVE_PERIOD" enumvalue="1206" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DEC_DIMENSIONS_EXCLUSIVE_AU" enumvalue="1207" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DEC_DIMENSIONS_EXCLUSIVE_BV" enumvalue="1208" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DEC_DIMENSIONS_EXCLUSIVE_CW" enumvalue="1209" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DEC_DCS_NOT_ALL_OF_ABC_GIVEN" enumvalue="1210" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DEC_DCS_2D_NOT_IN_XY_PLANE" enumvalue="1211" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DEC_CIRCLE_NON_UNIFORM_SCALING" enumvalue="1212" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DEC_ROTATION_AFFECTS_SCALING" enumvalue="1213" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DEC_DCS_NOT_ALL_OF_IJK_GIVEN" enumvalue="1214" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_IPR_LOCAL_VAR_UNKNOWN_TYPE" enumvalue="1250" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_IPR_LVALUE_WRONG_TYPE" enumvalue="1251" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_IPR_EVAL_STACK_OVERFLOW" enumvalue="1252" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_IPR_NOT_A_NUMBER" enumvalue="1253" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_IPR_DIVISION_BY_ZERO" enumvalue="1254" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_IPR_INVALID_SCALING_FACTORS" enumvalue="1255" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_IPR_INTERPRETER_STACK_IMBALANCE" enumvalue="1256" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_IPR_INTERPRETER_STACK_OVERFLOW" enumvalue="1257" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_IPR_INVALID_INTERPRETER_STACK_BUFFER" enumvalue="1258" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_IPR_BUFFER_TOO_SMALL" enumvalue="1259" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DNCCS_NO_DATA" enumvalue="1280" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DNCCS_TOO_MANY_CALLSTACKS" enumvalue="1281" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DNCCS_INVALID_PROGRAM_INDEX" enumvalue="1282" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DNCCS_TOO_MANY_PROGRAMS" enumvalue="1283" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DNCCS_WRONG_TASK" enumvalue="1284" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_GCV_BUFFER_TOO_SMALL" enumvalue="1300" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_GCV_BUFFER_WRONG_TYPE" enumvalue="1301" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_GCV_UNKNOWN_IPO_LINE" enumvalue="1302" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CNC_INTERNAL_ERROR" enumvalue="1400" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PATH_MAX_HPOINTS_EXCEEDED" enumvalue="1401" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRC_G75_NOT_ALLOWED" enumvalue="1410" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRC_QUEUE_FULL_NON_CARTESIAN" enumvalue="1411" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRC_SPLINE3D_5_NOT_SUPPORTED" enumvalue="1412" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRC_ELLIPSES_NOT_SUPPORTED" enumvalue="1413" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRC_PLANE_CHANGE_NOT_ALLOWED" enumvalue="1414" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CNC_INVALID_GEOINFO" enumvalue="1415" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CNC_CANNOT_APPEND_TO_OUTQUEUE" enumvalue="1416" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AL_ELLIPSES_NOT_SUPPORTED" enumvalue="1430" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_NAV_MAX_SUBPROGRAM_NESTING_EXCEEDED" enumvalue="1450" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_NAV_RETURN_FROM_MAIN" enumvalue="1451" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_NAV_SUBPROGRAM_DECLARATION_NOT_FOUND" enumvalue="1452" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_NAV_NOT_ENOUGH_SPACE_FOR_COMPLETE_SENTENCE" enumvalue="1453" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_NO_CNC_REF_TYPE" enumvalue="1500" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_NO_OUTQUEUE_TYPE" enumvalue="1501" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_GEOINFO_BUFFER_MISALIGNED" enumvalue="1502" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_3D_MODE_NOT_SUPPORTED" enumvalue="1600" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SAA_SMOOTHAREA_TOO_LARGE" enumvalue="1700" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SAA_SP_INVALID_INPUT" enumvalue="1701" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SA_QUEUE_NOT_IN_BUFFER" enumvalue="1800" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SA_QUEUE_CHANGED_DURING_OP" enumvalue="1801" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_OS_INVALID_PARAMETER" enumvalue="1820" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_BSSP_IPO_NOT_ACTIVE" enumvalue="1830" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_BS_SAVEDPOS_NOT_REACHED" enumvalue="1831" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_BS_NO_POS_STORED" enumvalue="1832" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INVALID_FEATURE_FLAG" enumvalue="1900" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SMB_HFUN_NOT_SUPPORTED" enumvalue="1901" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SMB_ONLY_3DMODE" enumvalue="1902" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SMB_ERROR_COMPUTING_SPLINE" enumvalue="1903" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SMM_INVALID_PARAM_NUMBER" enumvalue="1910" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INVALID_PARAMETER" enumvalue="1950" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_BLENDING_NOT_SUPPORTED_BY_PREVIOUS_MOVEMENT" enumvalue="1951" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_BUFFERED_NOT_SUPPORTED_BY_PREVIOUS_MOVEMENT" enumvalue="1952" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INHERIT_OWNER_ACTIVE_MOVEMENT_NOT_CALLED" enumvalue="1953" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MOVING_WITHOUT_ACTIVE_MOVEMENT" enumvalue="1954" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_BUFFER_MODE_NOT_SUPPORTED" enumvalue="1955" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_ERROR_IN_A_PREVIOUS_MOVEMENT" enumvalue="1956" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MORE_THAN_ONE_MOVEMENT_PER_INSTANCE" enumvalue="1957" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_SUPERIMPOSED_FB_WASNT_CALLED" enumvalue="1958" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RNCF_FILE_DOESNT_EXIST" enumvalue="2000" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RNCF_NO_BUFFER" enumvalue="2001" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RNCF_BUFFER_TOO_SMALL" enumvalue="2002" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RNCF_DATA_UNDERRUN" enumvalue="2003" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RNCF_VAR_COULDNT_BE_REPLACED" enumvalue="2004" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RNCF_NOT_VARLIST" enumvalue="2005" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RNCF_NO_STRINGBUFFER" enumvalue="2006" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RNCF_STRINGBUFFER_OVERRUN" enumvalue="2007" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RNCF_SUBPROGRAM_FILE_NOT_FOUND" enumvalue="2008" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RNCF_FILE_CANNOT_DETERMINE_SIZE" enumvalue="2009" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RNCQ_FILE_DOESNT_EXIST" enumvalue="2050" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RNCQ_NO_BUFFER" enumvalue="2051" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RNCQ_BUFFER_TOO_SMALL" enumvalue="2052" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RNCQ_UNEXPECTED_EOF" enumvalue="2053" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_ADL_FILE_CANNOT_BE_OPENED" enumvalue="2100" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_ADL_BUFFER_OVERRUN" enumvalue="2101" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RCAM_FILE_DOESNT_EXIST" enumvalue="2200" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RCAM_TOO_MUCH_DATA" enumvalue="2201" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RCAM_WRONG_COMPILE_TYPE" enumvalue="2202" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RCAM_WRONG_VERSION" enumvalue="2203" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RCAM_UNEXPECTED_EOF" enumvalue="2204" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RCAM_WRITE_ERROR" enumvalue="2205" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RCAM_READ_ERROR" enumvalue="2206" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_WDPF_CHANNEL_OCCUPIED" enumvalue="3001" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_WDPF_CANNOT_CREATE_FILE" enumvalue="3002" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_WDPF_ERROR_WHEN_READING_PARAMS" enumvalue="3003" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_WDPF_TIMEOUT_PREPARING_LIST" enumvalue="3004" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_ENC_DENOM_ZERO" enumvalue="5000" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_ENC_AXISUSEDBYOTHERFB" enumvalue="5001" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_ENC_FILTER_DEPTH_INVALID" enumvalue="5002" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INTERNAL_ERROR_INIT_MOVEMENT" enumvalue="6000" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INVALID_AXIS_TYPE" enumvalue="6001" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PCCQ_POINTBUFFERTOOSMALL" enumvalue="10000" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PCCQ_INPUTBUFFERFULLBUTNOTFINALIZED" enumvalue="10001" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_WRONG_STATE" enumvalue="11000" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_TOO_MANY_AXES" enumvalue="11001" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_INVALID_DYNLIMITS" enumvalue="11002" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_INVALID_COORD_SYSTEM" enumvalue="11004" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_SINGLE_AXIS_ERROR" enumvalue="11005" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MOVE_INVALID_BUFFER_MODE" enumvalue="11006" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MOVE_INVALID_DYNAMIC_FACTOR" enumvalue="11007" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MOVE_INVALID_DYNAMICS" enumvalue="11008" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_AXIS_NOT_PART_OF_GROUP" enumvalue="11009" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_NOT_SUPPORTED" enumvalue="11010" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_KINEMATICS_NOT_SET" enumvalue="11011" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_WRONG_NUMBER_OF_AXES" enumvalue="11012" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_INTERRUPTED_BY_SINGLE_AXIS" enumvalue="11013" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_FOLLOW_SETVALUES" enumvalue="11014" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_TOO_MANY_DEPENDENCIES" enumvalue="11015" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_MUTUAL_DEPENDENCY" enumvalue="11016" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_DEPENDENCY_IN_DIFFERENT_TASK" enumvalue="11017" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_AXIS_IN_DIFFERENT_TASK" enumvalue="11018" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_PCS_STILL_IN_USE" enumvalue="11019" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_CMD_ABORTED_DUE_TO_ERROR" enumvalue="11020" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_INVALID_PARAMETER" enumvalue="11021" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_UNSUPPORTED_RAMPTYPE" enumvalue="11022" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MOVE_INVALID_TRANSITION_PARAMETER" enumvalue="11023" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_CPTR_CANNOT_FOLLOW" enumvalue="11025" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_CONTINUE_WRONG_POSITION" enumvalue="11026" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_CONTINUE_BUFFER_TOO_SMALL" enumvalue="11027" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_CONTINUE_WRONG_CHECKSUM" enumvalue="11028" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_IDLE_WAIT_AXES_MOVING" enumvalue="11029" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_INVERSE_TRAFO_EXCEEDING_POSLIMITS" enumvalue="11030" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_CANNOT_ADD_SAME_AXIS" enumvalue="11031" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_TRANSFORMATION_NOT_SET" enumvalue="11032" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_NON_RESUMABLE_ERROR" enumvalue="11033" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_CONTINUE_DATA_NOT_WRITTEN" enumvalue="11034" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_INVALID_INTERRUPT_POSITION" enumvalue="11036" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RELATIVE_MOVEMENT_TRACKING_CS" enumvalue="11037" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_RELATIVE_MOVEMENT_ABORTING_TRACKING" enumvalue="11038" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CIRCULAR_MOVEMENT_TRACKING_CS" enumvalue="11039" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CIRCULAR_MOVEMENT_ABORTING_TRACKING_CS" enumvalue="11040" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_CONTINUE_POSITION_WRONG_CHECKSUM" enumvalue="11041" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CIRCULAR_TRACKING_TOOL_CHANGE_NOT_SUPPORTED" enumvalue="11042" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_COULD_NOT_WRITE_CONTINUE_DATA" enumvalue="11043" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MODULO_AXIS_FOR_NON_ROTARY_JOINT" enumvalue="11044" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MODULO_AXIS_FOR_LIMITED_ROTARY_JOINT" enumvalue="11045" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MODULO_AXIS_PERIOD_NOT_360" enumvalue="11046" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_FB_WASNT_CALLED_DURING_EXECUTION" enumvalue="11047" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_NO_EVALUATION_POSSIBLE_FOR_TIME_OFFSET" enumvalue="11048" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INVALID_SOURCE_TYPE_FOR_TIME_OFFSET" enumvalue="11049" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_INVALID_TIME_OFFSET" enumvalue="11050" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TIME_OFFSET_TOO_LARGE" enumvalue="11051" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_KERNEL_PTP_INTERNAL_ERROR" enumvalue="11100" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_KERNEL_PTP_INVALID_TASKCYCLETIME" enumvalue="11101" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRAFO_INVALID_PARAMETERS" enumvalue="12000" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRAFO_INVALID_CONSTELLATION" enumvalue="12001" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRAFO_INVALID_COUPLING" enumvalue="12002" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRAFO_NOT_INITIALIZED" enumvalue="12003" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRAFO_NO_TOOL_WITH_OFFSET_ALLOWED" enumvalue="12004" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_TOOL_OFFSET_INCOMPATIBLE_WITH_KINEMATICS" enumvalue="12005" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRAFO_INVALID_AXIS_LIMITS" enumvalue="12006" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_PATH_DEVIATION_TOO_HIGH" enumvalue="12007" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_POSITION_EXCEEDS_POSLIMITS" enumvalue="12008" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_NO_DYNAMIC_MODEL_CONFIGURED" enumvalue="12009" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_DYNAMICS_NUM_TORQUES_NEQ_NUM_AXES" enumvalue="12010" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_MAX_AXIS_LAG_EXCEEDED" enumvalue="12020" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_MAX_POSITION_LAG_EXCEEDED" enumvalue="12021" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_MAX_ORIENTATION_LAG_EXCEEDED" enumvalue="12022" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_CACHE_FULL" enumvalue="12100" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_EVAL_ERROR" enumvalue="12101" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_NON_CONTINUABLE_STATE" enumvalue="12102" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_MAX_LENGTH_EXCEEDED" enumvalue="12103" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_ACCELERATION_TOO_HIGH" enumvalue="12104" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_MAX_ITERATIONS_EXCEEDED" enumvalue="12105" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_NO_TRAJECTORY" enumvalue="12106" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_OUT_QUEUE_FULL" enumvalue="12107" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_QUEUE_UNDERRUN" enumvalue="12108" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_INVALID_QUEUE" enumvalue="12109" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_BLENDING_INTERNAL_ERROR" enumvalue="12110" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_CIRCLE_COLLINEAR_POINTS" enumvalue="12111" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_CIRCLE_CENTER_NOT_ON_BISECTOR" enumvalue="12112" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_CIRCLE_RADIUS_ZERO" enumvalue="12113" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_CIRCLE_DISTANCE_LARGER_THAN_DIAMETER" enumvalue="12114" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_CIRCLE_START_AND_ENDPOINT_EQUAL" enumvalue="12115" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_BLENDING_DEGENERATE_SPLINE" enumvalue="12116" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_ELEMENT_TOO_SHORT" enumvalue="12117" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_COULD_NOT_CUT_PATH" enumvalue="12118" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_INVALID_ANGULAR_VEL_ACC" enumvalue="12119" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_INVALID_ORIENTATION" enumvalue="12120" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_TIME_BUDGET_EXCEEDED" enumvalue="12121" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_AXIS_LIMIT_VIOLATED" enumvalue="12122" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_CONFIGS_DIFFER" enumvalue="12125" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_BUS_TASK_NOT_CALLED" enumvalue="12126" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_NO_ROOT_IN_INTERVAL_FOUND" enumvalue="12127" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_KIN_DOES_NOT_SUPPORT_AXIS_ORIENTATION_IPO" enumvalue="12128" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_AXIS_ORIENTATION_IPO_NOT_SUPPORTED_FOR_CPTR" enumvalue="12129" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_INVALID_PATH_ELEM" enumvalue="12130" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_TRANSITION_NOT_SMOOTH" enumvalue="12131" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_AXIS_ORIENTATION_IPO_CONFIG_DIFFERS" enumvalue="12132" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_AXIS_ORIENTATION_IPO_OFFSET2_NOT_IMPLEMENTED" enumvalue="12133" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_ROTARY_AXIS_PERIOD_MISMATCH" enumvalue="12134" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_ROTARY_AXIS_RANGE_VIOLATION" enumvalue="12135" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_COMPUTE_TARGET_DISCONTINUITY" enumvalue="12136" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_TRAJECTORY_NOT_SMOOTH" enumvalue="12137" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_ERROR_CREATING_PARAM_TRANSFORM" enumvalue="12138" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_PTP_DATA_NUMBER_OF_AXES" enumvalue="12139" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_NEGATIVE_PATH_VELOCITY" enumvalue="12140" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_TRANSITIONING_FROM_SINGLE_AXIS_MOVEMENT_NOT_SUPPORTED" enumvalue="12141" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_PLANNER_NO_PROGRESS" enumvalue="12142" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_INTERNAL_EVAL_CACHE_ERROR" enumvalue="12143" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_INVALID_ROOT_ACC_TOO_HIGH" enumvalue="12144" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_INVALID_ROOT_TRAJECTORY_TOO_LARGE" enumvalue="12145" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_EMPTY_TRAJECTORY" enumvalue="12146" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_FORECAST_TOO_LARGE" enumvalue="12147" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_INVALID_ROOT_ENDPOS_NOT_GREATER_STARTPOS" enumvalue="12148" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_GROUPJOG2_MAX_DISTANCE_NON_POSITIVE" enumvalue="12200" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_GROUPJOG2_DYNAMIC_CS_NOT_SUPPORTED" enumvalue="12201" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRIGGER_TOO_MANY_TRIGGERS_PREPARED" enumvalue="12300" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRIGGER_UNSUPPORTED_MOVEMENT_TYPE" enumvalue="12301" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRIGGER_INVALID_POS_TYPE" enumvalue="12302" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRIGGER_RELATIVE_POSITION_OUT_OF_RANGE" enumvalue="12303" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRIGGER_PLANE_NORMAL_NOT_A_UNIT" enumvalue="12304" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRIGGER_PLANE_DISTANCE_NEGATIVE" enumvalue="12305" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRIGGER_PLANE_COORD_SYSTEM_INVALID" enumvalue="12306" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRIGGER_DISTANCE_OUT_OF_RANGE" enumvalue="12307" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRIGGER_PLANE_NO_INTERSECTION" enumvalue="12308" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRIGGER_TRACKING_TRANSITION_NOT_SUPPORTED" enumvalue="12309" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRIGGER_PTP_NOT_SUPPORTED" enumvalue="12310" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_BUILDER_FULL" enumvalue="12400" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_BUILDER_INVALID_MASTER_DISTANCE" enumvalue="12401" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_BUILDER_GAP_BETWEEN_SEGMENTS" enumvalue="12402" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_BUILDER_NO_IMPLICIT_LEFT_BOUNDARY_ALLOWED" enumvalue="12403" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_BUILDER_INVALID_IMPLICIT_CAM_SEGMENT_MASTER_DISTANCE" enumvalue="12404" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_BUILDER_CAM_REF_INSUFFICIENT_MEMORY" enumvalue="12405" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_BUILDER_LAST_SEGMENT_HAS_IMPLICIT_RIGHT_BOUNDARY" enumvalue="12406" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_BUILDER_INVALID_CAM_REF_INITIALIZATION" enumvalue="12407" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_BUILDER_ERROR_PENDING" enumvalue="12408" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_BUILDER_CONTINUITY_REQUIREMENT_VIOLATED" enumvalue="12409" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_BUILDER_MASTER_DISTANCE_TOO_SHORT" enumvalue="12410" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_BUILDER_IMPLICIT_CAM_SEGMENT_DISTANCE_TOO_SHORT" enumvalue="12411" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_BUILDER_CAM_REF_INVALID_ARRAY_SIZE" enumvalue="12412" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_FIRST_INTERNAL_ERROR_CODE" enumvalue="13000" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MOVEMENT_INTERNAL_ERROR" enumvalue="13001" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MOVEMENT_GET_POS_INTERNAL_ERROR" enumvalue="13002" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CPTR_INTERNAL_ERROR" enumvalue="13003" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_IPO_INTERNAL_ERROR" enumvalue="13004" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_ADD_NEW_MOVEMENT_INTERNAL_ERROR" enumvalue="13005" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_COORDINATION_INTERNAL_ERROR" enumvalue="13006" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_ADD_MOVEMENT_INTERNAL_ERROR" enumvalue="13007" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_READ_AXIS_STATES_INTERNAL_ERROR" enumvalue="13008" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_READ_VEL_INTERNAL_ERROR" enumvalue="13009" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_READ_ACC_INTERNAL_ERROR" enumvalue="13010" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_INVALID_STATE_INTERNAL_ERROR" enumvalue="13011" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_PCS_INTERNAL_ERROR" enumvalue="13012" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_INTERRUPT_INTERNAL_ERROR" enumvalue="13013" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CONTINUE_DATA_READ_INTERNAL_ERROR" enumvalue="13014" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CONTINUE_DATA_WRITE_INTERNAL_ERROR" enumvalue="13015" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PATH_ELEM_INTERNAL_ERROR" enumvalue="13016" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PATH_ELEM_ESTIMATE_LIMITS_INTERNAL_ERROR" enumvalue="13017" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PATH_ELEM_ZERO_LEN_INTERNAL_ERROR" enumvalue="13018" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PATH_ELEM_BLEND_INTERNAL_ERROR" enumvalue="13019" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PATH_ELEM_BLEND_GEO_INTERNAL_ERROR" enumvalue="13020" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PATH_ELEM_BLEND_ORI_INTERNAL_ERROR" enumvalue="13021" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PATH_ELEM_BLEND_AS_INTERNAL_ERROR" enumvalue="13022" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_ELEM_FUN_CART_INTERNAL_ERROR" enumvalue="13023" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_HALT_STOP_INTERNAL_ERROR" enumvalue="13024" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRJ_PLANNING_INIT_INTERNAL_ERROR" enumvalue="13025" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRJ_PLANNING_GEN_SAMPLES_INTERNAL_ERROR" enumvalue="13026" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRJ_PLANNING_PATH_OUT_INTERNAL_ERROR" enumvalue="13027" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRJ_PLANNING_EVAL_AXIS_INTERNAL_ERROR" enumvalue="13028" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_TRJ_PLANNING_LOOKAHEAD_INTERNAL_ERROR" enumvalue="13029" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_READ_JERK_INTERNAL_ERROR" enumvalue="13030" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_AXIS_GROUP_WRITE_CONTINUE_POS_INTERNAL_ERROR" enumvalue="13031" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CP_TRANSITION_CHECK_FAILED" enumvalue="13032" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_ABORTING_INTERNAL_ERROR" enumvalue="13033" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_LINE_TO_REL_STANDSTILL_INTERNAL_ERROR" enumvalue="13034" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PATH_ELEM_POSE_EVAL_INTERNAL_ERROR" enumvalue="13035" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CS_REF_COUNT_INTERNAL_ERROR" enumvalue="13036" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PATH_QUEUE_INTERNAL_ERROR" enumvalue="13037" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_PATH_ELEM_QUEUE_INTERNAL_ERROR" enumvalue="13038" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_ELEM_FUN_QUEUE_INTERNAL_ERROR" enumvalue="13039" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MAC_DUPLICATE_CALLER_INTERNAL_ERROR" enumvalue="13040" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_MAC_INTERNAL_ERROR" enumvalue="13041" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_READ_POSITION_INTERNAL_ERROR" enumvalue="13042" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_ELEM_FUN_PROJECT_POINT_INTERNAL_ERROR" enumvalue="13043" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_EVAL_INTERNAL_ERROR" enumvalue="13044" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_BUILDER_INTERNAL_ERROR_INVALID_CAM_SEGMENT_TYPE" enumvalue="13045" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_BUILDER_INTERNAL_ERROR_INVALID_DESCRIPTION_TYPE" enumvalue="13046" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_ETC_CANNOT_DETERMINE_DCCLOCKREFERENCE" enumvalue="13047" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_BUILDER_INTERNAL_ERROR_IMPLICIT_BOUNDARY_CANNOT_BE_EVALUATED" enumvalue="13048" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_CAM_BUILDER_INTERNAL_ERROR_OUT_OF_BOUNDS" enumvalue="13049" />
+      <UserDefElement type="T_SMC_ERROR" iecname="SMC_LAST_INTERNAL_ERROR_CODE" enumvalue="13999" />
+    </TypeUserDef>
+    <TypeUserDef name="T_SMC_HOMING_MODE" size="2" nativesize="2" swapsize="2" typeclass="Enum" iecname="SMC_HOMING_MODE" basetype="T_INT">
+      <UserDefElement type="T_SMC_HOMING_MODE" iecname="FAST_BSLOW_S_STOP" enumvalue="0" />
+      <UserDefElement type="T_SMC_HOMING_MODE" iecname="FAST_BSLOW_STOP_S" enumvalue="1" />
+      <UserDefElement type="T_SMC_HOMING_MODE" iecname="FAST_BSLOW_I_S_STOP" enumvalue="2" />
+      <UserDefElement type="T_SMC_HOMING_MODE" iecname="FAST_SLOW_S_STOP" enumvalue="4" />
+      <UserDefElement type="T_SMC_HOMING_MODE" iecname="FAST_SLOW_STOP_S" enumvalue="5" />
+      <UserDefElement type="T_SMC_HOMING_MODE" iecname="FAST_SLOW_I_S_STOP" enumvalue="6" />
+    </TypeUserDef>
+    <TypeUserDef name="T_SMC_ORIENTATION_MODE" size="2" nativesize="2" swapsize="2" typeclass="Enum" iecname="SMC_ORIENTATION_MODE" basetype="T_INT">
+      <UserDefElement type="T_SMC_ORIENTATION_MODE" iecname="GreatCircle" enumvalue="0" />
+      <UserDefElement type="T_SMC_ORIENTATION_MODE" iecname="Axis" enumvalue="1" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ST_Group_Param_Jog" size="81" nativesize="88" typeclass="Userdef" pouclass="STRUCTURE" iecname="ST_Group_Param_Jog">
+      <UserDefElement iecname="rMaxDistOfLinear" type="T_LREAL" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rMaxDistOfAngular" type="T_LREAL" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rVelocity" type="T_LREAL" byteoffset="16" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rAcceleration" type="T_LREAL" byteoffset="24" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rDeceleration" type="T_LREAL" byteoffset="32" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rJerk" type="T_LREAL" byteoffset="40" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rVelFactor" type="T_LREAL" byteoffset="48" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rAccFactor" type="T_LREAL" byteoffset="56" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rJerkFactor" type="T_LREAL" byteoffset="64" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rTorqueFactor" type="T_LREAL" byteoffset="72" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xAbcAsAcs" type="T_BOOL" byteoffset="80" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_AxisControl_Outputs" size="120" nativesize="120" typeclass="Userdef" pouclass="STRUCTURE" iecname="AxisControl_Outputs">
+      <UserDefElement iecname="xCommOK" type="T_BOOL" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xInRun" type="T_BOOL" byteoffset="1" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xHoming" type="T_BOOL" byteoffset="2" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xRefOK" type="T_BOOL" byteoffset="3" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xStopped" type="T_BOOL" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xSynchronized" type="T_BOOL" byteoffset="5" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xDone" type="T_BOOL" byteoffset="6" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xBusy" type="T_BOOL" byteoffset="7" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xActive" type="T_BOOL" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xCommandAborted" type="T_BOOL" byteoffset="9" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="etActiveMode" type="T_ET_ControlMode" byteoffset="10" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xAxisAlarm" type="T_BOOL" byteoffset="12" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="dwAxisAlarmID" type="T_DWORD" byteoffset="16" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="etAxisState" type="T_SMC_AXIS_STATE" byteoffset="20" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="sAxisStateExt" type="T_STRING" byteoffset="22" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rActPosition" type="T_LREAL" byteoffset="104" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rActVelocity" type="T_LREAL" byteoffset="112" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_GroupControl_Outputs" size="2168" nativesize="2168" typeclass="Userdef" pouclass="STRUCTURE" iecname="GroupControl_Outputs">
+      <UserDefElement iecname="xEnabled" type="T_BOOL" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xCommOK" type="T_BOOL" byteoffset="1" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xInRun" type="T_BOOL" byteoffset="2" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xHoming" type="T_BOOL" byteoffset="3" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xRefOK" type="T_BOOL" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xStopped" type="T_BOOL" byteoffset="5" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xTrackingDynamicCS" type="T_BOOL" byteoffset="6" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xDone" type="T_BOOL" byteoffset="7" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xBusy" type="T_BOOL" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xActive" type="T_BOOL" byteoffset="9" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xCommandAborted" type="T_BOOL" byteoffset="10" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xCommandAccepted" type="T_BOOL" byteoffset="11" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xError" type="T_BOOL" byteoffset="12" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="etErrorId" type="T_SMC_ERROR" byteoffset="14" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="etActiveMode" type="T_ET_GroupRunMode" byteoffset="16" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="etState" type="T_SMC_AXIS_GROUP_STATE" byteoffset="18" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="sStateExt" type="T_STRING" byteoffset="20" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="arRefPos" type="T_ARRAY__0__5__0__5__OF_LREAL" byteoffset="104" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="arRefVel" type="T_ARRAY__0__5__0__5__OF_LREAL" byteoffset="392" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="arRefAcc" type="T_ARRAY__0__5__0__5__OF_LREAL" byteoffset="680" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="arRefJerk" type="T_ARRAY__0__5__0__5__OF_LREAL" byteoffset="968" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="arActPos" type="T_ARRAY__0__5__0__5__OF_LREAL" byteoffset="1256" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="arActVel" type="T_ARRAY__0__5__0__5__OF_LREAL" byteoffset="1544" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="arActAcc" type="T_ARRAY__0__5__0__5__OF_LREAL" byteoffset="1832" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rActPos_X" type="T_LREAL" byteoffset="2120" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rActPos_Y" type="T_LREAL" byteoffset="2128" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rActPos_Z" type="T_LREAL" byteoffset="2136" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rActPos_A" type="T_LREAL" byteoffset="2144" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rActPos_B" type="T_LREAL" byteoffset="2152" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rActPos_C" type="T_LREAL" byteoffset="2160" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_SM3_Robotics_SMC_COORD_SYSTEM" size="2" nativesize="2" swapsize="2" typeclass="Enum" iecname="SM3_Robotics.SMC_COORD_SYSTEM" aliasedtype="T_CoordSysType" aliasediecname="CoordSysType" basetype="T_INT">
+      <UserDefElement type="T_CoordSysType" iecname="ACS" enumvalue="0" />
+      <UserDefElement type="T_CoordSysType" iecname="MCS" enumvalue="1" />
+      <UserDefElement type="T_CoordSysType" iecname="WCS" enumvalue="2" />
+      <UserDefElement type="T_CoordSysType" iecname="PCS_1" enumvalue="3" />
+      <UserDefElement type="T_CoordSysType" iecname="PCS_2" enumvalue="4" />
+      <UserDefElement type="T_CoordSysType" iecname="TCS" enumvalue="5" />
+      <UserDefElement type="T_CoordSysType" iecname="ICS" enumvalue="6" />
+    </TypeUserDef>
+    <TypeUserDef name="T_SMC_POS_REF" size="0" nativesize="48" typeclass="Userdef" pouclass="UNION" iecname="SMC_POS_REF">
+      <UserDefElement iecname="a" type="T_AXISPOS_REF" byteoffset="-1" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="c" type="T_MC_COORD_REF" byteoffset="-1" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="v" type="T_ARRAY__0__5__OF_LREAL" byteoffset="-1" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ST_Axis_Param_Home" size="36" nativesize="40" typeclass="Userdef" pouclass="STRUCTURE" iecname="ST_Axis_Param_Home">
+      <UserDefElement iecname="lrSignalDelay" type="T_LREAL" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="etHomingMode" type="T_SMC_HOMING_MODE" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="etDirection" type="T_MC_DIRECTION" byteoffset="10" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="lrVelocitySlow" type="T_LREAL" byteoffset="16" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="lrIndexPosition" type="T_LREAL" byteoffset="24" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xReturnToZero" type="T_BOOL" byteoffset="32" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xIndexOccured" type="T_BOOL" byteoffset="33" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xIgnoreHWLimit" type="T_BOOL" byteoffset="34" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xReletiveSetPos" type="T_BOOL" byteoffset="35" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ST_AxisModuleParam" size="92" nativesize="96" typeclass="Userdef" pouclass="STRUCTURE" iecname="ST_AxisModuleParam">
+      <UserDefElement iecname="etModuleAxisMvAbsDirection" type="T_MC_DIRECTION" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="lrJogVelocity" type="T_LREAL" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="lrJogAcceleration" type="T_LREAL" byteoffset="16" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="lrJogDeceleration" type="T_LREAL" byteoffset="24" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="lrJogJerk" type="T_LREAL" byteoffset="32" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="lrStopRamp" type="T_LREAL" byteoffset="40" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="lrStopJerk" type="T_LREAL" byteoffset="48" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="stHome" type="T_ST_Axis_Param_Home" byteoffset="56" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ST_Group_Param_Motion" size="24" nativesize="168" typeclass="Userdef" pouclass="STRUCTURE" iecname="ST_Group_Param_Motion">
+      <UserDefElement iecname="stPosition" type="T_SMC_POS_REF" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="stCircAuxPoint" type="T_SMC_POS_REF" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="stCircEndPoint" type="T_SMC_POS_REF" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="etCircMode" type="T_SMC_CIRC_MODE" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="etCircPathChoice" type="T_MC_CIRC_PATHCHOICE" byteoffset="2" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xStopClearMovements" type="T_BOOL" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="lrStopRamp" type="T_LREAL" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="lrStopJerk" type="T_LREAL" byteoffset="16" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ST_Group_Param_SetPos" size="4" nativesize="64" typeclass="Userdef" pouclass="STRUCTURE" iecname="ST_Group_Param_SetPos">
+      <UserDefElement iecname="xRelative" type="T_BOOL" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="stPosition" type="T_SMC_POS_REF" byteoffset="1" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="stCoordinate" type="T_SM3_Robotics_SMC_COORD_SYSTEM" byteoffset="2" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_AxisControl_Inputs" size="207" nativesize="216" typeclass="Userdef" pouclass="STRUCTURE" iecname="AxisControl_Inputs">
+      <UserDefElement iecname="sAxisName" type="T_STRING" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xEnable" type="T_BOOL" byteoffset="81" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xStart" type="T_BOOL" byteoffset="82" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="etRunMode" type="T_ET_ControlMode" byteoffset="84" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xReset" type="T_BOOL" byteoffset="86" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xStop" type="T_BOOL" byteoffset="87" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rPosition" type="T_REAL" byteoffset="88" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rVelocity" type="T_REAL" byteoffset="92" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rAcceleration" type="T_REAL" byteoffset="96" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rDeceleration" type="T_REAL" byteoffset="100" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rJerk" type="T_REAL" byteoffset="104" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="etBufferMode" type="T_MC_BUFFER_MODE" byteoffset="108" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="stParameters" type="T_ST_AxisModuleParam" byteoffset="112" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xJogForward" type="T_BOOL" byteoffset="204" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xJogBackward" type="T_BOOL" byteoffset="205" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xHomeSwitch" type="T_BOOL" byteoffset="206" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ST_GroupModuleParam" size="110" nativesize="320" typeclass="Userdef" pouclass="STRUCTURE" iecname="ST_GroupModuleParam">
+      <UserDefElement iecname="stMotion" type="T_ST_Group_Param_Motion" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="stJog" type="T_ST_Group_Param_Jog" byteoffset="24" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="stSetPos" type="T_ST_Group_Param_SetPos" byteoffset="106" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_AxisControl_Interface" size="328" nativesize="336" typeclass="Userdef" pouclass="STRUCTURE" iecname="AxisControl_Interface">
+      <UserDefElement iecname="stI" type="T_AxisControl_Inputs" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="stQ" type="T_AxisControl_Outputs" byteoffset="208" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_GroupControl_Inputs" size="220" nativesize="432" typeclass="Userdef" pouclass="STRUCTURE" iecname="GroupControl_Inputs">
+      <UserDefElement iecname="xEnable" type="T_BOOL" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xStart" type="T_BOOL" byteoffset="1" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="etRunMode" type="T_ET_GroupRunMode" byteoffset="2" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xReset" type="T_BOOL" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xHalt" type="T_BOOL" byteoffset="5" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xStop" type="T_BOOL" byteoffset="6" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rVelocity" type="T_LREAL" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rAcceleration" type="T_LREAL" byteoffset="16" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rDeceleration" type="T_LREAL" byteoffset="24" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rJerk" type="T_LREAL" byteoffset="32" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rVelFactor" type="T_LREAL" byteoffset="40" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rAccFactor" type="T_LREAL" byteoffset="48" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rJerkFactor" type="T_LREAL" byteoffset="56" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rTorqueFactor" type="T_LREAL" byteoffset="64" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="etCoordSystem" type="T_SM3_Robotics_SMC_COORD_SYSTEM" byteoffset="72" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="etBufferMode" type="T_MC_BUFFER_MODE" byteoffset="74" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="etTransitionMode" type="T_MC_TRANSITION_MODE" byteoffset="76" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="arTransitionParam" type="T_ARRAY__0__1__OF_LREAL" byteoffset="80" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="etOrientationMode" type="T_SMC_ORIENTATION_MODE" byteoffset="96" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="stParameters" type="T_ST_GroupModuleParam" byteoffset="104" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xJogForward" type="T_BOOL" byteoffset="214" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="xJogBackward" type="T_BOOL" byteoffset="215" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="etJogCoordinate" type="T_SM3_Robotics_SMC_COORD_SYSTEM" byteoffset="216" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="etJogAxis" type="T_ET_AxisInGroup" byteoffset="218" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__3__OF_AxisControl_Interface" size="1312" nativesize="1344" typeclass="Array" iecname="ARRAY [0..3] OF AxisControl_Interface" basetype="T_AxisControl_Interface">
+      <ArrayDim minrange="0" maxrange="3" />
+    </TypeArray>
+    <TypeUserDef name="T_GroupControl_Interface" size="2392" nativesize="2600" typeclass="Userdef" pouclass="STRUCTURE" iecname="GroupControl_Interface">
+      <UserDefElement iecname="stI" type="T_GroupControl_Inputs" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="stQ" type="T_GroupControl_Outputs" byteoffset="224" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__0__OF_GroupControl_Interface" size="2392" nativesize="2600" typeclass="Array" iecname="ARRAY [0..0] OF GroupControl_Interface" basetype="T_GroupControl_Interface">
+      <ArrayDim minrange="0" maxrange="0" />
+    </TypeArray>
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="GVL_Axis">
+        <Node name="astItfAxisCtrl" type="T_ARRAY__0__3__OF_AxisControl_Interface" access="ReadWrite" />
+        <Node name="astItfGroupCtrl" type="T_ARRAY__0__0__OF_GroupControl_Interface" access="ReadWrite" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>
